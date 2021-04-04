@@ -1,0 +1,34 @@
+﻿<Window x:Class="ProducentKonsumentWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProducentKonsumentWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" Name ="Output"/>
+            <ColumnDefinition Width="1*" Name ="Start"/>
+            <ColumnDefinition Width="2*" Name ="Input"/>
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*" Name ="ModeRow"/>
+            <RowDefinition Height="3*" Name ="StorageRow"/>
+            <RowDefinition Height="1*" Name ="StartRow"/>
+        </Grid.RowDefinitions>
+        <Label Name="outputModeLabel0" Grid.Row="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Content="WYBIERZ TRYB" BorderThickness="1,1,1,1" BorderBrush="Black" FontWeight="Bold" FontSize="24" Margin="40, 60, 0, 100"/>
+        <ComboBox Name ="inputModeComboBox" Grid.Row="0" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0, 60, 60, 100">
+            <ComboBoxItem Content="Jeden producent jeden konsument" />
+            <ComboBoxItem Content="Wielu producentów jeden konsument"/>
+            <ComboBoxItem Content="Jeden producent wielu konsumentów"/>
+            <ComboBoxItem Content="Wielu producentów wielu konsumentów"/>
+        </ComboBox> 
+        <Label Name="outputModeLabel1" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="0" Content="ROZMIAR MAGAZYNU" BorderThickness="1,1,1,1" BorderBrush="Black" FontWeight="Bold" FontSize="24" Margin="40, 50, 0, 50"/>
+        <TextBox Name ="inputStorageSizeTextBox" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Black" FontSize="24" Margin="0, 50, 60, 50" TextChanged="inputStorageSizeTextBox_TextChanged" Width="250" Height="50"/>
+        <Button Name="StartButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 10, 10, 10" Width="250" Height="50" Content="START" Click="StartButton_Click"/>
+
+    </Grid>
+   
+</Window>
